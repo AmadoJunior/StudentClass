@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
-class Student {
+class StudentClass {
   String name;
   double[] score = new double[3];
 
-  public Student(double test1, double test2, double test3, String s) {
+  public StudentClass(double test1, double test2, double test3, String s) {
     this.name = s;
     this.score[0] = test1;
     this.score[1] = test2;
     this.score[2] = test3;
   }
 
-  public Student(String s) {
+  public StudentClass(String s) {
     this.name = s;
     for (int i = 0; i < score.length; i++) {
       score[i] = 0;
@@ -45,7 +45,7 @@ public class Student {
     while (!scanner.hasNextInt())
       scanner.next();
     int userInput = scanner.nextInt();
-    Student student;
+    StudentClass student;
     if (userInput == 1) {
       System.out.println("Enter the three test scores:");
       while (!scanner.hasNextDouble())
@@ -57,9 +57,9 @@ public class Student {
       while (!scanner.hasNextDouble())
         scanner.next();
       double test3 = scanner.nextDouble();
-      student = new Student(test1, test2, test3, name);
+      student = new StudentClass(test1, test2, test3, name);
     } else {
-      student = new Student(name);
+      student = new StudentClass(name);
     }
     System.out.println("Enter 1 to change a test score.");
     while (!scanner.hasNextInt())
